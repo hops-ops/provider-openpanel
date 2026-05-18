@@ -13,12 +13,19 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/scheme"
 )
 
+// Package type metadata.
 const (
 	Group   = "openpanel.crossplane.io"
 	Version = "v1alpha1"
 )
 
 var (
+	// SchemeGroupVersion is the group/version this stub package would
+	// register if it held any types. Kept exported so the codegen's
+	// zz_register.go import compiles even when no resources exist at
+	// this scope/version.
 	SchemeGroupVersion = schema.GroupVersion{Group: Group, Version: Version}
-	SchemeBuilder      = &scheme.Builder{GroupVersion: SchemeGroupVersion}
+	// SchemeBuilder is the scheme builder; empty by design (see file
+	// doc comment).
+	SchemeBuilder = &scheme.Builder{GroupVersion: SchemeGroupVersion}
 )
