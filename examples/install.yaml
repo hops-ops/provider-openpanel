@@ -1,0 +1,6 @@
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-upjet-openpanel
+spec:
+  package: xpkg.upbound.io/hops-ops/provider-upjet-openpanel:v0.1.0

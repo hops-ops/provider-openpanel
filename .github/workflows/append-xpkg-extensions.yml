@@ -1,0 +1,26 @@
+name: Append xpkg Extensions
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version tag of the published package to append extensions to (e.g. v0.1.1)"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  append-extensions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: Append extensions
+        uses: ./.github/actions/append-xpkg-extensions
+        with:
+          package: xpkg.upbound.io/hops-ops/provider-upjet-openpanel
+          version: ${{ github.event.inputs.version }}
+          xpkg-access-id: ${{ secrets.XPKG_ACCESS_ID }}
+          xpkg-token: ${{ secrets.XPKG_TOKEN }}
