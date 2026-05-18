@@ -38,7 +38,10 @@ jobs:
         run: |
           curl -sL https://raw.githubusercontent.com/crossplane/crossplane/master/install.sh | XP_CHANNEL=stable sh
           sudo mv ./crossplane /usr/local/bin/
-          crossplane version
+          # `crossplane version` hits the cluster for the server
+          # version; we don't have a kubeconfig in CI. `xpkg --help`
+          # confirms the binary works without making a cluster call.
+          crossplane xpkg --help >/dev/null
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@49b3bc8e6bdd4a60e6116a5414239cba5943d3cf # v3.6.0
