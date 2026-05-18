@@ -11,6 +11,7 @@ import (
 
 	client "github.com/hops-ops/provider-openpanel/internal/controller/namespaced/client/client"
 	organization "github.com/hops-ops/provider-openpanel/internal/controller/namespaced/organization/organization"
+	ssoconfig "github.com/hops-ops/provider-openpanel/internal/controller/namespaced/organization/ssoconfig"
 	project "github.com/hops-ops/provider-openpanel/internal/controller/namespaced/project/project"
 	providerconfig "github.com/hops-ops/provider-openpanel/internal/controller/namespaced/providerconfig"
 	reference "github.com/hops-ops/provider-openpanel/internal/controller/namespaced/reference/reference"
@@ -22,6 +23,7 @@ func Setup(mgr ctrl.Manager, o controller.Options) error {
 	for _, setup := range []func(ctrl.Manager, controller.Options) error{
 		client.Setup,
 		organization.Setup,
+		ssoconfig.Setup,
 		project.Setup,
 		providerconfig.Setup,
 		reference.Setup,
@@ -39,6 +41,7 @@ func SetupGated(mgr ctrl.Manager, o controller.Options) error {
 	for _, setup := range []func(ctrl.Manager, controller.Options) error{
 		client.SetupGated,
 		organization.SetupGated,
+		ssoconfig.SetupGated,
 		project.SetupGated,
 		providerconfig.SetupGated,
 		reference.SetupGated,

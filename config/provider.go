@@ -30,10 +30,11 @@ var providerMetadata string
 // composite for Reference). None accept a caller-supplied external name,
 // so they all use `IdentifierFromProvider`.
 var ExternalNameConfigs = map[string]ujconfig.ExternalName{
-	"openpanel_organization": ujconfig.IdentifierFromProvider,
-	"openpanel_project":      ujconfig.IdentifierFromProvider,
-	"openpanel_client":       ujconfig.IdentifierFromProvider,
-	"openpanel_reference":    ujconfig.IdentifierFromProvider,
+	"openpanel_organization":            ujconfig.IdentifierFromProvider,
+	"openpanel_organization_sso_config": ujconfig.IdentifierFromProvider,
+	"openpanel_project":                 ujconfig.IdentifierFromProvider,
+	"openpanel_client":                  ujconfig.IdentifierFromProvider,
+	"openpanel_reference":               ujconfig.IdentifierFromProvider,
 }
 
 // ExternalNameConfigurations + ExternalNameConfigured are defined in
@@ -56,6 +57,17 @@ func newProvider(rootGroup string) *ujconfig.Provider {
 	// /manage API).
 	pc.AddResourceConfigurator("openpanel_organization", func(r *ujconfig.Resource) {
 		r.ShortGroup = "organization"
+	})
+
+	// Per-organization OIDC SSO config. 1:1 with Organization (the
+	// /manage API path is /organizations/:id/sso). MRs reference the
+	// parent Org via organization_id.
+	pc.AddResourceConfigurator("openpanel_organization_sso_config", func(r *ujconfig.Resource) {
+		r.ShortGroup = "organization"
+		r.Kind = "SsoConfig"
+		r.References["organization_id"] = ujconfig.Reference{
+			TerraformName: "openpanel_organization",
+		}
 	})
 
 	pc.AddResourceConfigurator("openpanel_project", func(r *ujconfig.Resource) {

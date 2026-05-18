@@ -16,3 +16,12 @@ func (l *OrganizationList) GetItems() []resource.Managed {
 	}
 	return items
 }
+
+// GetItems of this SsoConfigList.
+func (l *SsoConfigList) GetItems() []resource.Managed {
+	items := make([]resource.Managed, len(l.Items))
+	for i := range l.Items {
+		items[i] = &l.Items[i]
+	}
+	return items
+}
