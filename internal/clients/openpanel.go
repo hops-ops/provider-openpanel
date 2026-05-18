@@ -16,8 +16,8 @@ import (
 
 	"github.com/crossplane/upjet/v2/pkg/terraform"
 
-	clusterv1beta1 "github.com/hops-ops/provider-upjet-openpanel/apis/cluster/v1beta1"
-	namespacedv1beta1 "github.com/hops-ops/provider-upjet-openpanel/apis/namespaced/v1beta1"
+	clusterv1beta1 "github.com/hops-ops/provider-openpanel/apis/cluster/v1beta1"
+	namespacedv1beta1 "github.com/hops-ops/provider-openpanel/apis/namespaced/v1beta1"
 )
 
 const (

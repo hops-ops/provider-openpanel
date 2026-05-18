@@ -1,10 +1,10 @@
 apiVersion: meta.pkg.crossplane.io/v1
 kind: Provider
 metadata:
-  name: provider-upjet-openpanel
+  name: provider-openpanel
   annotations:
     meta.crossplane.io/maintainer: Crossplane Contributors <info@crossplane.io>
-    meta.crossplane.io/source: github.com/hops-ops/provider-upjet-openpanel
+    meta.crossplane.io/source: github.com/hops-ops/provider-openpanel
     meta.crossplane.io/license: Apache-2.0
     meta.crossplane.io/description: The OpenPanel Crossplane Provider based on Upjet framework.
     friendly-name.meta.crossplane.io: Provider OpenPanel

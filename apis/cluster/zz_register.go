@@ -10,12 +10,12 @@ package cluster
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 
-	v1alpha1 "github.com/hops-ops/provider-upjet-openpanel/apis/cluster/client/v1alpha1"
-	v1alpha1organization "github.com/hops-ops/provider-upjet-openpanel/apis/cluster/organization/v1alpha1"
-	v1alpha1project "github.com/hops-ops/provider-upjet-openpanel/apis/cluster/project/v1alpha1"
-	v1alpha1reference "github.com/hops-ops/provider-upjet-openpanel/apis/cluster/reference/v1alpha1"
-	v1alpha1cluster "github.com/hops-ops/provider-upjet-openpanel/apis/cluster/v1alpha1"
-	v1beta1 "github.com/hops-ops/provider-upjet-openpanel/apis/cluster/v1beta1"
+	v1alpha1 "github.com/hops-ops/provider-openpanel/apis/cluster/client/v1alpha1"
+	v1alpha1organization "github.com/hops-ops/provider-openpanel/apis/cluster/organization/v1alpha1"
+	v1alpha1project "github.com/hops-ops/provider-openpanel/apis/cluster/project/v1alpha1"
+	v1alpha1reference "github.com/hops-ops/provider-openpanel/apis/cluster/reference/v1alpha1"
+	v1alpha1cluster "github.com/hops-ops/provider-openpanel/apis/cluster/v1alpha1"
+	v1beta1 "github.com/hops-ops/provider-openpanel/apis/cluster/v1beta1"
 )
 
 func init() {

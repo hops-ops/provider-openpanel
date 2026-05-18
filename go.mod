@@ -1,4 +1,4 @@
-module github.com/hops-ops/provider-upjet-openpanel
+module github.com/hops-ops/provider-openpanel
 
 go 1.26.2
 

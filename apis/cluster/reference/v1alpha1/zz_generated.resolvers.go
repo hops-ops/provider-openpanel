@@ -9,7 +9,7 @@ package v1alpha1
 import (
 	"context"
 	reference "github.com/crossplane/crossplane-runtime/v2/pkg/reference"
-	v1alpha1 "github.com/hops-ops/provider-upjet-openpanel/apis/cluster/project/v1alpha1"
+	v1alpha1 "github.com/hops-ops/provider-openpanel/apis/cluster/project/v1alpha1"
 	errors "github.com/pkg/errors"
 	client "sigs.k8s.io/controller-runtime/pkg/client"
 )

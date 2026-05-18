@@ -4,7 +4,7 @@ name: on-version-tagged
 # Two jobs:
 #   1. release — GitHub release notes via the simple-release workflow.
 #   2. xpkg   — build the Crossplane provider package and push it to
-#               ghcr.io/hops-ops/provider-upjet-openpanel:<tag>.
+#               ghcr.io/hops-ops/provider-openpanel:<tag>.
 
 on:
   push:

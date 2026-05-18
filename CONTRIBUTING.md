@@ -26,15 +26,15 @@
 
 1. [Create Release Branch](#creating-a-release-branch) or [Patch a Release Branch](#patching-a-release-branch) the
   [Release Branch](#release-branches).
-1. Visit [Tag Workflow Action](https://github.com/hops-ops/provider-upjet-openpanel/actions/workflows/tag.yaml)
+1. Visit [Tag Workflow Action](https://github.com/hops-ops/provider-openpanel/actions/workflows/tag.yaml)
 and click on the `Run workflow` button. Make sure the "Branch" is set to the release branch, e.g., `release-0.1`.
 Enter the version number in the "Release version" field, e.g., `v0.1.0`, and a sensible value for the "Tag message"
 field. Verify the information and click the "Run workflow" button.
 1. Wait for the Tag Workflow Action to complete.
-1. Run the [CI Workflow Action](https://github.com/hops-ops/provider-upjet-openpanel/actions/workflows/ci.yml)
+1. Run the [CI Workflow Action](https://github.com/hops-ops/provider-openpanel/actions/workflows/ci.yml)
    by clicking on the "Run workflow" button. Make sure the "Branch" is set to the release branch, e.g., `release-0.1`.
 1. Create a new GitHub Release
-   at [New Release](https://github.com/hops-ops/provider-upjet-openpanel/releases/new).
+   at [New Release](https://github.com/hops-ops/provider-openpanel/releases/new).
    Select the tag that was created by the Tag Workflow Action, e.g., `v0.1.0`, and enter the release notes. Make sure the Target branch is set to the release branch, e.g., `release-0.1`. Click the "Publish release" button.
 
 ## Explanations
@@ -49,7 +49,7 @@ Reuse the existing release branch, backport fixes to the existing major/minor br
 
 #### Creating a Release Branch
 
-Create or patch the [Release Branch](#release-branches) from the `main` branch. You could use visit [Branches](https://github.com/hops-ops/provider-upjet-openpanel/branches)
+Create or patch the [Release Branch](#release-branches) from the `main` branch. You could use visit [Branches](https://github.com/hops-ops/provider-openpanel/branches)
 and click on the `New branch` button, or use the following commands:
 
 ```shell

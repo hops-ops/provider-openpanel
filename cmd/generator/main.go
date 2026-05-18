@@ -12,7 +12,7 @@ import (
 
 	"github.com/crossplane/upjet/v2/pkg/pipeline"
 
-	"github.com/hops-ops/provider-upjet-openpanel/config"
+	"github.com/hops-ops/provider-openpanel/config"
 )
 
 func main() {

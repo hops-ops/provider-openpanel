@@ -25,7 +25,7 @@ type ReferenceInitParameters struct {
 
 	// (String) Owning Project ID.
 	// Owning Project ID.
-	// +crossplane:generate:reference:type=github.com/hops-ops/provider-upjet-openpanel/apis/namespaced/project/v1alpha1.Project
+	// +crossplane:generate:reference:type=github.com/hops-ops/provider-openpanel/apis/namespaced/project/v1alpha1.Project
 	ProjectID *string `json:"projectId,omitempty" tf:"project_id,omitempty"`
 
 	// Reference to a Project in project to populate projectId.
@@ -79,7 +79,7 @@ type ReferenceParameters struct {
 
 	// (String) Owning Project ID.
 	// Owning Project ID.
-	// +crossplane:generate:reference:type=github.com/hops-ops/provider-upjet-openpanel/apis/namespaced/project/v1alpha1.Project
+	// +crossplane:generate:reference:type=github.com/hops-ops/provider-openpanel/apis/namespaced/project/v1alpha1.Project
 	// +kubebuilder:validation:Optional
 	ProjectID *string `json:"projectId,omitempty" tf:"project_id,omitempty"`
 

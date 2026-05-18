@@ -9,11 +9,11 @@ import (
 
 	"github.com/crossplane/upjet/v2/pkg/controller"
 
-	client "github.com/hops-ops/provider-upjet-openpanel/internal/controller/cluster/client/client"
-	organization "github.com/hops-ops/provider-upjet-openpanel/internal/controller/cluster/organization/organization"
-	project "github.com/hops-ops/provider-upjet-openpanel/internal/controller/cluster/project/project"
-	providerconfig "github.com/hops-ops/provider-upjet-openpanel/internal/controller/cluster/providerconfig"
-	reference "github.com/hops-ops/provider-upjet-openpanel/internal/controller/cluster/reference/reference"
+	client "github.com/hops-ops/provider-openpanel/internal/controller/cluster/client/client"
+	organization "github.com/hops-ops/provider-openpanel/internal/controller/cluster/organization/organization"
+	project "github.com/hops-ops/provider-openpanel/internal/controller/cluster/project/project"
+	providerconfig "github.com/hops-ops/provider-openpanel/internal/controller/cluster/providerconfig"
+	reference "github.com/hops-ops/provider-openpanel/internal/controller/cluster/reference/reference"
 )
 
 // Setup creates all controllers with the supplied logger and adds them to

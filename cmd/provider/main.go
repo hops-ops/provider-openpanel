@@ -35,13 +35,13 @@ import (
 	metricsserver "sigs.k8s.io/controller-runtime/pkg/metrics/server"
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
 
-	apisCluster "github.com/hops-ops/provider-upjet-openpanel/apis/cluster"
-	apisNamespaced "github.com/hops-ops/provider-upjet-openpanel/apis/namespaced"
-	"github.com/hops-ops/provider-upjet-openpanel/config"
-	"github.com/hops-ops/provider-upjet-openpanel/internal/clients"
-	controllerCluster "github.com/hops-ops/provider-upjet-openpanel/internal/controller/cluster"
-	controllerNamespaced "github.com/hops-ops/provider-upjet-openpanel/internal/controller/namespaced"
-	"github.com/hops-ops/provider-upjet-openpanel/internal/features"
+	apisCluster "github.com/hops-ops/provider-openpanel/apis/cluster"
+	apisNamespaced "github.com/hops-ops/provider-openpanel/apis/namespaced"
+	"github.com/hops-ops/provider-openpanel/config"
+	"github.com/hops-ops/provider-openpanel/internal/clients"
+	controllerCluster "github.com/hops-ops/provider-openpanel/internal/controller/cluster"
+	controllerNamespaced "github.com/hops-ops/provider-openpanel/internal/controller/namespaced"
+	"github.com/hops-ops/provider-openpanel/internal/features"
 )
 
 const (
@@ -78,7 +78,7 @@ func main() {
 	kingpin.MustParse(app.Parse(os.Args[1:]))
 
 	zl := zap.New(zap.UseDevMode(*debug))
-	log := logging.NewLogrLogger(zl.WithName("provider-upjet-openpanel"))
+	log := logging.NewLogrLogger(zl.WithName("provider-openpanel"))
 	if *debug {
 		ctrl.SetLogger(zl)
 	}
@@ -103,7 +103,7 @@ func main() {
 
 	mgr, err := ctrl.NewManager(cfg, ctrl.Options{
 		LeaderElection:             *leaderElection,
-		LeaderElectionID:           "crossplane-leader-election-provider-upjet-openpanel",
+		LeaderElectionID:           "crossplane-leader-election-provider-openpanel",
 		LeaderElectionResourceLock: resourcelock.LeasesResourceLock,
 		LeaseDuration:              func() *time.Duration { d := 60 * time.Second; return &d }(),
 		RenewDeadline:              func() *time.Duration { d := 50 * time.Second; return &d }(),

@@ -1,6 +1,6 @@
 # Provider Upjet OpenPanel
 
-`provider-upjet-openpanel` is a [Crossplane](https://crossplane.io/) provider that
+`provider-openpanel` is a [Crossplane](https://crossplane.io/) provider that
 is built using [Upjet](https://github.com/crossplane/upjet) code
 generation tools and exposes XRM-conformant managed resources for the
 [OpenPanel](https://openpanel.com/) API.
@@ -8,9 +8,9 @@ generation tools and exposes XRM-conformant managed resources for the
 ## Getting Started
 
 Install the provider by using the following command after changing the image tag
-to the [latest release](https://marketplace.upbound.io/providers/hops-ops/provider-upjet-openpanel):
+to the [latest release](https://marketplace.upbound.io/providers/hops-ops/provider-openpanel):
 ```
-up ctp provider install hops-ops/provider-upjet-openpanel:v0.1.0
+up ctp provider install hops-ops/provider-openpanel:v0.1.0
 ```
 
 Alternatively, you can use declarative installation:
@@ -20,13 +20,13 @@ cat <<EOF | kubectl apply -f -
 apiVersion: pkg.crossplane.io/v1
 kind: Provider
 metadata:
-  name: provider-upjet-openpanel
+  name: provider-openpanel
 spec:
-  package: xpkg.upbound.io/hops-ops/provider-upjet-openpanel:v0.1.0
+  package: xpkg.upbound.io/hops-ops/provider-openpanel:v0.1.0
 EOF
 ```
 
-You can see the API reference [here](https://doc.crds.dev/github.com/hops-ops/provider-upjet-openpanel).
+You can see the API reference [here](https://doc.crds.dev/github.com/hops-ops/provider-openpanel).
 
 ## Developing
 
@@ -56,4 +56,4 @@ make build
 ## Report a Bug
 
 For filing bugs, suggesting improvements, or requesting new features, please
-open an [issue](https://github.com/hops-ops/provider-upjet-openpanel/issues).
+open an [issue](https://github.com/hops-ops/provider-openpanel/issues).

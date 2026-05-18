@@ -10,7 +10,7 @@ formatters:
   settings:
     goimports:
       local-prefixes:
-        - github.com/hops-ops/provider-upjet-openpanel
+        - github.com/hops-ops/provider-openpanel
 
 linters:
   default: none

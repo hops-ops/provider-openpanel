@@ -13,7 +13,7 @@ import (
 
 const (
 	resourcePrefix = "openpanel"
-	modulePath     = "github.com/hops-ops/provider-upjet-openpanel"
+	modulePath     = "github.com/hops-ops/provider-openpanel"
 )
 
 //go:embed schema.json

@@ -1,7 +1,7 @@
 # ====================================================================================
 # Setup Project
 
-PROJECT_NAME ?= provider-upjet-openpanel
+PROJECT_NAME ?= provider-openpanel
 PROJECT_REPO ?= github.com/hops-ops/$(PROJECT_NAME)
 
 export TERRAFORM_VERSION ?= 1.5.7
@@ -98,7 +98,7 @@ fallthrough: submodules
 
 # NOTE(hasheddan): we force image building to happen prior to xpkg build so that
 # we ensure image is present in daemon.
-xpkg.build.provider-upjet-openpanel: do.build.images
+xpkg.build.provider-openpanel: do.build.images
 
 # NOTE(hasheddan): install Crossplane CLI before parallel platform builds (local.xpkg / e2e).
 build.init: $(CROSSPLANE_CLI) check-terraform-version

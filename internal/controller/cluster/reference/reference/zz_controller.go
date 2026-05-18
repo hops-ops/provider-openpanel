@@ -21,8 +21,8 @@ import (
 	"github.com/pkg/errors"
 	ctrl "sigs.k8s.io/controller-runtime"
 
-	v1alpha1 "github.com/hops-ops/provider-upjet-openpanel/apis/cluster/reference/v1alpha1"
-	features "github.com/hops-ops/provider-upjet-openpanel/internal/features"
+	v1alpha1 "github.com/hops-ops/provider-openpanel/apis/cluster/reference/v1alpha1"
+	features "github.com/hops-ops/provider-openpanel/internal/features"
 )
 
 // SetupGated adds a controller that reconciles Reference managed resources.

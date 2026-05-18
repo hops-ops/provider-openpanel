@@ -12,7 +12,7 @@ import (
 	"github.com/crossplane/upjet/v2/pkg/controller"
 	ctrl "sigs.k8s.io/controller-runtime"
 
-	"github.com/hops-ops/provider-upjet-openpanel/apis/namespaced/v1beta1"
+	"github.com/hops-ops/provider-openpanel/apis/namespaced/v1beta1"
 )
 
 // Setup adds controllers that reconcile ProviderConfigs and ClusterProviderConfigs
